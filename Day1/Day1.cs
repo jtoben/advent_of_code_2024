@@ -25,8 +25,8 @@
             rightList = [.. rightList.Order()];
 
             int differenceSum = 0;
-            for (int i = 0; i < leftList.Length; i++) {
-                differenceSum += Math.Abs(leftList[i] - rightList[i]);
+            for (int locationIndex = 0; locationIndex < leftList.Length; locationIndex++) {
+                differenceSum += Math.Abs(leftList[locationIndex] - rightList[locationIndex]);
             }
             return differenceSum;
         }
@@ -34,8 +34,8 @@
         private static int PartTwo(int[] leftList, int[] rightList)
         {
             int similarityScore = 0;
-            for (int i = 0; i < leftList.Length; i++) {
-                similarityScore += leftList[i] * rightList.Count(number => number == leftList[i]);
+            for (int locationIndex = 0; locationIndex < leftList.Length; locationIndex++) {
+                similarityScore += leftList[locationIndex] * rightList.Count(number => number == leftList[locationIndex]);
             }
 
             return similarityScore;
