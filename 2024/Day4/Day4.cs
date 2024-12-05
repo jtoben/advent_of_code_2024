@@ -63,6 +63,7 @@
                 Vector2 currentPosition = position + direction * charIndex;
 
                 if (currentPosition.X < 0 || currentPosition.Y < 0 || currentPosition.X >= wordSearchBoard.GetLength(0) || currentPosition.Y >= wordSearchBoard.GetLength(1)) {
+                    // Out of bounds.
                     return false;
                 }
 
