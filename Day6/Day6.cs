@@ -104,10 +104,7 @@
 
         private record Vector2(int X, int Y)
         {
-            public static Vector2 operator +(Vector2 value1, Vector2 value2)
-            {
-                return new Vector2(value1.X + value2.X, value1.Y + value2.Y);
-            }
+            public static Vector2 operator +(Vector2 value1, Vector2 value2) => new(value1.X + value2.X, value1.Y + value2.Y);
         }
     }
 }
